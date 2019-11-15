@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Challenge 2</title>
+  </head>
+  <body>
+    <header>
+      <div class="container-fluid">
+        <div class="row ">
+          <div class="col-12">
+            <h1 class="text-center">Hyper Hazel</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col" id="">
+            <h3>Steps: <a id="score">0</a></h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <img
+              src="http://placehold.it/200x200"
+              alt="dog"
+              onclick="walkDog()"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <button class="btn btn-info btn-lg" id="run" onclick="runButton()">
+              Run
+            </button>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <button class="btn btn-info btn-lg" onclick="myFunction()">
+              Throw Ball
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <button class="btn btn-warning btn-lg" onclick="myFunction()">
+              SQUIRREL!!
+            </button>
+          </div>
+          <!-- <div class="col-sm-12 col-md-6">
+              <button class="btn btn-warning" onclick="myFunction()">CAT</button>
+            </div> -->
+        </div>
+      </div>
+      <footer></footer>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
