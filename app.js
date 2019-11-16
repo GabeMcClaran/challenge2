@@ -1,10 +1,26 @@
 var points = 0;
-var squirrels = 0;
 var pointsps = 0;
 var cats = 0;
-var squirrelCost = 0;
+var timerSet = false;
+
+let clickUpgrades = {
+  run: {
+    increment: 1
+  },
+  squirrels: {
+    price: 10,
+    quantity: 0,
+    multiplier: 5
+  },
+  cats: {
+    price: 5,
+    quantity: 0,
+    multiplier: 1
+  }
+};
+
 function walkDog() {
-  points += 1;
+  points += clickUpgrades.run.increment;
   document.getElementById("score").innerHTML = points.toString();
 }
 
@@ -16,23 +32,34 @@ function walkDog() {
 // }
 
 function squirrelButton() {
-  if (points >= 50 + squirrels * 5) {
-    points -= 50;
-    // stepsps += 1;
+  if (!timerSet) {
+    setMyInterval();
+    timerSet = true;
+  }
 
-    squirrels += 1;
+  var mySquirrels = clickUpgrades.squirrels;
+  console.log("Clicked squirrelButton");
+  if (points >= mySquirrels.price) {
+
+    points -= mySquirrels.price;
+    mySquirrels.quantity++;
+
     pointsps += 1;
-    squirrelCost = 50 + squirrels * 5;
+
+    mySquirrels.price += mySquirrels.multiplier;
+
     document.getElementById("score").innerHTML = points.toString();
     document.getElementById("squirrelstep").innerHTML =
-      squirrels + " SQUIRRELS " + squirrelCost + " steps";
+      mySquirrels.quantity + " SQUIRRELS " + mySquirrels.price + " steps";
   }
-  setInterval(function() {
-    points += pointsps;
-    document.getElementById("score").innerHTML = points.toString();
-  }, 2000);
 }
+
 function catButton() {
+  if (!timerSet) {
+    setMyInterval();
+    timerSet = true;
+  }
+
   if (points >= 100 + cats * 10) {
     points -= 100 + cats * 10;
     // stepsps+= 1;
@@ -44,11 +71,12 @@ function catButton() {
     document.getElementById("catstep").innerHTML =
       cats + " CAT!!!! " + catscost + " Steps";
   }
+}
 
-  setInterval(function() {
+function setMyInterval() {
+  setInterval(function () {
     points += pointsps;
     document.getElementById("score").innerHTML = points.toString();
   }, 2000);
 }
-
 // start cheese below here
