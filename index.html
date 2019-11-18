@@ -24,51 +24,65 @@
       </div>
     </header>
     <main>
-      <div class="container-fluid">
+      <div class="container-fluid" id="maincontent">
         <div class="row">
-          <div class="col" id="">
+          <div class="col text-white" id="">
             <h3>Steps: <a id="score">0</a></h3>
           </div>
         </div>
         <div class="row">
-          <div class="col">
+          <div class="col align-center hazelvid">
             <img
-              src="http://placehold.it/200x200"
+              src="https://media2.giphy.com/media/nno7vmS72PX5b1T7vu/200.webp?cid=790b761139bdb2ee5727e700fd63e3a78b857fe6318acedc&rid=200.webp"
               alt="dog"
               onclick="walkDog()"
             />
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-12 col-md-6">
+          <div class="col-sm-12">
             <button class="btn btn-info btn-lg" id="run" onclick="runButton()">
-              Run
+              Run 5 Steps
             </button>
           </div>
-          <div class="col-sm-12 col-md-6">
-            <button class="btn btn-info btn-lg" onclick="myFunction()">
-              Throw Ball
+          <div class="col-sm-12 text-white">Adds 1 step per click per Run</div>
+          <div class="col-sm-12">
+            <button
+              class="btn btn-info btn-lg"
+              id="tosstoy"
+              onclick="toyButton()"
+            >
+              Throw Toy 10 Steps
             </button>
           </div>
+          <div class="col-sm-12 text-white">Adds 2 steps per click,per Toy</div>
         </div>
+        <div class="row"></div>
+        <!-- <div class="row space"></div> -->
         <div class="row">
-          <div class="col-sm-12 col-md-6">
+          <div class="col-sm-12">
             <button
               class="btn btn-warning btn-lg"
               id="squirrelstep"
               onclick="squirrelButton()"
             >
-              SQUIRREL 50 Steps
+              SQUIRREL 20 Steps
             </button>
           </div>
-          <div class="col-sm-12 col-md-6">
+          <div class="col-sm-12 text-white">
+            Adds 1 step every 2 seconds per Squirrel
+          </div>
+          <div class="col-sm-12">
             <button
               class="btn btn-warning btn-lg"
               id="catstep"
               onclick="catButton()"
             >
-              CAT!!! 100 Steps
+              CAT!!! 30 Steps
             </button>
+          </div>
+          <div class="col-sm-12 text-white">
+            Adds 2 steps every 2 seconds per Cat
           </div>
         </div>
       </div>
@@ -77,18 +91,3 @@
     <script src="app.js"></script>
   </body>
 </html>
--->
-
-<!-- start here
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-    <title>Document</title>
-  </head>
-  <body></body>
-</html> -->
