@@ -1,5 +1,9 @@
-* {
+/* * {
   outline: 1px solid red;
+} */
+
+header {
+  background-color: cornflowerblue;
 }
 
 header {
@@ -25,8 +29,4 @@ footer {
 }
 #maincontent {
   text-align: center;
-}
-
-.space {
-  min-height: 5vh;
 }
