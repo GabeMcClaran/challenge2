@@ -41,6 +41,8 @@ function walkDog() {
     points += clickUpgrades.toy.quantity * 2;
   }
   points += autoUpgrades.run.increment;
+
+  // these dont work like should on click, work all the time?
   // points += clickUpgrades.toy.quantity;
   // points += clickUpgrades.run.quantity;
   document.getElementById("score").innerHTML = points.toString();
@@ -61,7 +63,7 @@ function squirrelButton() {
   }
 
   var mySquirrels = autoUpgrades.squirrels;
-  // console.log("Clicked squirrelButton");
+  // console.log("Clicked squirrelButton"); testing to see if function works
   if (points >= mySquirrels.price) {
     points -= mySquirrels.price;
     mySquirrels.quantity++;
@@ -81,7 +83,7 @@ function catButton() {
     timerSet = true;
   }
   var myCats = autoUpgrades.cats;
-  // console.log("clicked catButton");
+  // console.log("clicked catButton"); testing to see if function works
   if (points >= myCats.price) {
     points -= myCats.price;
     myCats.quantity++;
