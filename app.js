@@ -53,6 +53,7 @@ function walkDog() {
 //   document.getElementById("score").innerHTML = points;
 // }
 
+// this function increases the steps by 1 ever second
 function squirrelButton() {
   if (!timerSet) {
     setMyInterval();
@@ -71,6 +72,8 @@ function squirrelButton() {
       mySquirrels.quantity + " SQUIRRELS " + mySquirrels.price + " steps";
   }
 }
+
+// this function increases the step by 2 every second
 
 function catButton() {
   if (!timerSet) {
@@ -98,6 +101,8 @@ function setMyInterval() {
   }, 2000);
 }
 
+// this function increases the clickcount by 2
+
 function toyButton() {
   var myToy = clickUpgrades.toy;
   if (points >= myToy.price) {
@@ -111,6 +116,9 @@ function toyButton() {
       myToy.quantity + " Toy Thrown " + myToy.price + " Steps";
   }
 }
+
+// this function increases clicks by 1
+
 function runButton() {
   var myRun = clickUpgrades.run;
   if (points >= myRun.price) {
